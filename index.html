@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <script src="jquery-3.6.0.js"></script>
+        <script src="js/jquery-3.6.0.js"></script>
         <title>Blog Post - Start Bootstrap Template</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -17,12 +17,12 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <a class="navbar-brand" href="#!">Tech Learnings</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Java</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blogtemplate.html">Java</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
                     </ul>
                 </div>
@@ -35,7 +35,7 @@
                     <!-- Post content-->
                     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container bootstrap snippets bootdey">
-<div class="col-md-8">
+<div class="col-md-12">
   <div class="box box-widget">
     <div class="box-header with-border">
       <div class="user-block">
@@ -43,81 +43,157 @@
         <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
         <span class="description">Shared publicly - 7:30 PM Today</span>
       </div>
-      <div class="box-tools">
-      <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-original-title="Mark as read">
-        <i class="fa fa-circle-o"></i></button>
-        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-      </div>
+
     </div>
     <div class="box-body">
-      <p>Far far away, behind the word mountains, far from the
-      countries Vokalia and Consonantia, there live the blind
-      texts. Separated they live in Bookmarksgrove right at</p>
+      <p id="postdescr"></p>
 
       <p>the coast of the Semantics, a large language ocean.
       A small river named Duden flows by their place and supplies
       it with the necessary regelialia. It is a paradisematic
       country, in which roasted parts of sentences fly into
       your mouth.</p>
-
-      <div class="attachment-block clearfix">
-        <img class="attachment-img" src="https://via.placeholder.com/400x300/" alt="Attachment Image">
-        <div class="attachment-pushed">
-        <h4 class="attachment-heading"><a href="http://www.lipsum.com/">Lorem ipsum text generator</a></h4>
-        <div class="attachment-text">
-        Description about the attachment can be placed here.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry... <a href="#">more</a>
-        </div>
-        </div>
-      </div>
-      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Share</button>
-      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
-      <span class="pull-right text-muted">45 likes - 2 comments</span>
-    </div>
-    <div class="box-footer box-comments">
-      <div class="box-comment">
-        <img class="img-circle img-sm" src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="User Image">
-        <div class="comment-text">
-          <span class="username">
-          Maria Gonzales
-          <span class="text-muted pull-right">8:03 PM Today</span>
-          </span>
-          It is a long established fact that a reader will be distracted
-          by the readable content of a page when looking at its layout.
-        </div>
-      </div>
-      <div class="box-comment">
-        <img class="img-circle img-sm" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="User Image">
-        <div class="comment-text">
-          <span class="username">
-          Nora Havisham
-          <span class="text-muted pull-right">8:03 PM Today</span>
-          </span>
-          The point of using Lorem Ipsum is that it has a more-or-less
-          normal distribution of letters, as opposed to using
-          'Content here, content here', making it look like readable English.
-        </div>
-      </div>
-    </div>
-    <div class="box-footer">
-      <form action="#" method="post">
-        <img class="img-responsive img-circle img-sm" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Alt Text">
-        <div class="img-push">
-          <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
-        </div>
-      </form>
     </div>
   </div>
 </div>
 </div>
+
+</div>
+
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Web Design</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">JavaScript</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Side Widget</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                    </div>
                 </div>
             </div>
+  <div class="row">
+            <div class="col-lg-8">
+                <!-- Post content-->
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets bootdey">
+<div class="col-md-12">
+<div class="box box-widget">
+<div class="box-header with-border">
+  <div class="user-block">
+    <img class="img-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User Image">
+    <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
+    <span class="description">Shared publicly - 7:30 PM Today</span>
+  </div>
+
+</div>
+<div class="box-body">
+  <p>Far far away, behind the word mountains, far from the
+  countries Vokalia and Consonantia, there live the blind
+  texts. Separated they live in Bookmarksgrove right at</p>
+
+  <p>the coast of the Semantics, a large language ocean.
+  A small river named Duden flows by their place and supplies
+  it with the necessary regelialia. It is a paradisematic
+  country, in which roasted parts of sentences fly into
+  your mouth.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="row">
+<div class="col-lg-8">
+    <!-- Post content-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets bootdey">
+<div class="col-md-12">
+<div class="box box-widget">
+<div class="box-header with-border">
+<div class="user-block">
+<img class="img-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User Image">
+<span class="username"><a href="#">Jonathan Burke Jr.</a></span>
+<span class="description">Shared publicly - 7:30 PM Today</span>
+</div>
+
+</div>
+<div class="box-body">
+<p>Far far away, behind the word mountains, far from the
+countries Vokalia and Consonantia, there live the blind
+texts. Separated they live in Bookmarksgrove right at</p>
+
+<p>the coast of the Semantics, a large language ocean.
+A small river named Duden flows by their place and supplies
+it with the necessary regelialia. It is a paradisematic
+country, in which roasted parts of sentences fly into
+your mouth.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="row">
+<div class="col-lg-8">
+    <!-- Post content-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets bootdey">
+<div class="col-md-12">
+<div class="box box-widget">
+<div class="box-header with-border">
+<div class="user-block">
+<img class="img-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User Image">
+<span class="username"><a href="#">Jonathan Burke Jr.</a></span>
+<span class="description">Shared publicly - 7:30 PM Today</span>
+</div>
+
+</div>
+<div class="box-body">
+<p>Far far away, behind the word mountains, far from the
+countries Vokalia and Consonantia, there live the blind
+texts. Separated they live in Bookmarksgrove right at</p>
+
+<p>the coast of the Semantics, a large language ocean.
+A small river named Duden flows by their place and supplies
+it with the necessary regelialia. It is a paradisematic
+country, in which roasted parts of sentences fly into
+your mouth.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; TechLearnings.in 2021</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
