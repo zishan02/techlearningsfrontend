@@ -7,7 +7,9 @@
 // Use this file to add JavaScript to your project
 $(document).ready(function(){
   $.get("https://techlearningsbackend.herokuapp.com/fetchPost", function(data){
+  console.log(JSON.stringify(data));
     $("#postdescr").text(data[0].postData);
+     $("#postTitle").text(data[0].postTitle);
     });
 
 });
